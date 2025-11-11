@@ -14,4 +14,9 @@ public class TestGoogle extends Base {
         System.out.println("Title is: " + title);
         Assert.assertTrue(title.contains("Google"), "Title should contain 'Google'");
     }
+	
+	@Test
+	public void gmailLogIn() {
+		
+	}
 }
