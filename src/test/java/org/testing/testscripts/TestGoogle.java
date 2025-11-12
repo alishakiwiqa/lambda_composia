@@ -17,6 +17,11 @@ public class TestGoogle extends Base {
 	
 	@Test
 	public void gmailLogIn() {
-		
+		System.out.println("this test is for testing");
+	}
+	
+	@Test
+	public void demoTest() {
+		System.out.println("This test is for testing");
 	}
 }
