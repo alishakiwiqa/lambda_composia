@@ -1,0 +1,8 @@
+# Code owners are automatically requested for review when someone opens a pull request
+# Each line is a file pattern followed by one or more owners
+
+# Default reviewers for all files
+* @alishakiwiqa
+
+# Specific file reviewer
+testng.xml @alishakiwiqa
