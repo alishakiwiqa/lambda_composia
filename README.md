@@ -1,7 +1,7 @@
 # Lambda Composia
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/alishakiwiqa/lambda_composia/ci.yml?branch=main&logo=github&label=Build)](https://github.com/alishakiwiqa/lambda_composia/actions)
-[![Coverage](https://img.shields.io/codecov/c/github/alishakiwiqa/lambda_composia?logo=codecov&label=Coverage)](https://codecov.io/gh/alishakiwiqa/lambda_composia)
+[[![Build Status](https://img.shields.io/github/actions/workflow/status/alishakiwiqa/lambda_composia/ci.yml?branch=main&logo=github&label=Build)](https://github.com/alishakiwiqa/lambda_composia/actions)
+[[![Coverage](https://img.shields.io/codecov/c/github/alishakiwiqa/lambda_composia?logo=codecov&label=Coverage)](https://codecov.io/gh/alishakiwiqa/lambda_composia)
 [![License](https://img.shields.io/github/license/alishakiwiqa/lambda_composia)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/alishakiwiqa/lambda_composia)](https://github.com/alishakiwiqa/lambda_composia/commits/main)
 
