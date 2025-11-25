@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  lambda-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lambda-service
+    ports:
+      - "${PORT:-8080}:8080"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - SERVICE_NAME=lambda
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - DATABASE_URL=${DATABASE_URL}
+    networks:
+      - microservices-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  lambda-db:
+    image: postgres:15-alpine
+    container_name: lambda-database
+    environment:
+      - POSTGRES_USER=${DB_USER:-postgres}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+      - POSTGRES_DB=lambda_db
+    volumes:
+      - lambda-db-data:/var/lib/postgresql/data
+    networks:
+      - microservices-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  lambda-redis:
+    image: redis:7-alpine
+    container_name: lambda-cache
+    command: redis-server --appendonly yes
+    volumes:
+      - lambda-redis-data:/data
+    networks:
+      - microservices-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  microservices-network:
+    driver: bridge
+
+volumes:
+  lambda-db-data:
+  lambda-redis-data:
