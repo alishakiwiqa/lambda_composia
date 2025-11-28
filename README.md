@@ -11,15 +11,15 @@ Lambda Composia is a modern Java-based project for serverless computing.
 
 ## Features
 
-- ✅ Automated CI/CD pipeline
-- ✅ Comprehensive test coverage
-- ✅ Production-ready builds
+✅ Automated CI/CD pipeline
+✅ Comprehensive test coverage
+✅ Production-ready builds   
 
-## Getting Started
+## Getting Started 
 
-### Prerequisites
+### Prerequisites 
 
-- Java 11 or higher
+- Java 11 or higher 
 - Maven 3.6+
 
 ### Installation
