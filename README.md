@@ -1,6 +1,6 @@
 # Lambda Composia
 
-Test PR created for review request demo.
+
 [[![Build Status](https://img.shields.io/github/actions/workflow/status/alishakiwiqa/lambda_composia/ci.yml?branch=main&logo=github&label=Build)](https://github.com/alishakiwiqa/lambda_composia/actions)
 [[![Coverage](https://img.shields.io/codecov/c/github/alishakiwiqa/lambda_composia?logo=codecov&label=Coverage)](https://codecov.io/gh/alishakiwiqa/lambda_composia)
 [![License](https://img.shields.io/github/license/alishakiwiqa/lambda_composia)](LICENSE)
