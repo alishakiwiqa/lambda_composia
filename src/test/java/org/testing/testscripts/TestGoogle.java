@@ -34,4 +34,9 @@ public class TestGoogle extends Base {
 	public void fourthTest() {
 		System.out.println("This is for testing.");
 	}
+	
+	@Test
+	public void fifthTest() {
+		System.out.println("This is for testing.");
+	}
 }
