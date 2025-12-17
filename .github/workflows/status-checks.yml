@@ -5,26 +5,11 @@ on:
     branches:
       - main
       - qa_test
-
-jobs:
-  ci-checks:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Full CI Check
-        run: echo "CI check completed"
-
-      - name: Build
-        run: echo "Build successful"
-
-      - name: Security Scan
-        run: echo "Security scan passed"
-
-      - name: Tests
-        run: echo "Tests passed"
+  workflow_dispatch:       # <-- add this
+    inputs:
+      branch_name:         # optional input
+        description: "Branch to run checks on"
+        required: true
 
       - name: Custom Deployment Check
         run: echo "Ready for deployment"
