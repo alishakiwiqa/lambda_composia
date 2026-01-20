@@ -1,6 +1,14 @@
 name: Summarize new issues
 
 on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Optional message"
+        required: false
+
+
+on:
   issues:
     types: [opened]
 
